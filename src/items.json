@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Tomater",
+        "zone": 1,
+        "added": false
+    },
+    {
+        "name": "Tacolefser",
+        "zone": 2,
+        "added": false
+    },
+    {
+        "name": "Biff",
+        "zone": 3,
+        "added": false
+    },
+    {
+        "name": "Øl",
+        "zone": 4,
+        "added": false
+    },
+    {
+        "name": "Pops",
+        "zone": 4,
+        "added": false
+    },
+    {
+        "name": "Bananer",
+        "zone": 1,
+        "added": false
+    }
+]
