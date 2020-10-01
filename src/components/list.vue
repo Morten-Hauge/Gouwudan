@@ -17,19 +17,19 @@
 
     <h1>Zone 2</h1>
     <!-- <div v-for="pickedItem in zone2" :key="pickedItem.name">{{pickedItem.name}} <br> {{pickedItem.zone}}</div> -->
-    <!-- <PickedItemComp v-for="pickedItem in zone2" :key="pickedItem.name" :pickedItem="pickedItem" /> -->
+    <PickedItemComp v-for="pickedItem in zone2Filter" :key="pickedItem.name" :pickedItem="pickedItem" />
 
     <br><br>
 
     <h1>Zone 3</h1>
     <!-- <div v-for="pickedItem in zone3" :key="pickedItem.name">{{pickedItem.name}} <br> {{pickedItem.zone}}</div> -->
-    <!-- <PickedItemComp v-for="pickedItem in zone3" :key="pickedItem.name" :pickedItem="pickedItem" /> -->
+    <PickedItemComp v-for="pickedItem in zone3Filter" :key="pickedItem.name" :pickedItem="pickedItem" />
 
     <br><br>
 
     <h1>Zone 4</h1>
     <!-- <div v-for="pickedItem in zone4" :key="pickedItem.name">{{pickedItem.name}} <br> {{pickedItem.zone}}</div> -->
-    <!-- <PickedItemComp v-for="pickedItem in zone4" :key="pickedItem.name" :pickedItem="pickedItem" /> -->
+    <PickedItemComp v-for="pickedItem in zone4Filter" :key="pickedItem.name" :pickedItem="pickedItem" />
 
     <br><br>
 
@@ -53,39 +53,22 @@ export default {
       shoppingList() {
         return this.$store.state.shoppingList
       },
-      zone1Filter() {
+      zone1(item) {
+        return this.$store.state.shoppingList.filter(
+          item => item.zone == 1
+        );
+      },
+      zone1Filter(zone1) {
         return this.$store.getters.zone1Getter
       },
-      test: function (pickedItem) {
-        if(pickedItem.zone === "1"){
-          return pickedItem
-        }
+      zone2Filter() {
+        return this.$store.getters.zone2Getter
       },
-      zone1: function() {
-        //let shoppingList = this.$store.state.shoppingList;
-        
-        return this.shoppingList.filter(function(pickedItem) {
-          //return shoppingList.item.zone.match(1)
-          //return this.$route.params.item.zone.match(1);
-          //return item.zone.match(1)
-          //return pickedItem
-           return pickedItem.zone.match(1)
-        })
+      zone3Filter() {
+        return this.$store.getters.zone3Getter
       },
-      zone2: function() {
-        return this.shoppingList.filter(function(item) {
-          return item.zone.match(2)
-        })
-      },
-      zone3: function() {
-        return this.shoppingList.filter(function(item) {
-          return item.zone.match(3)
-        })
-      },
-      zone4: function() {
-        return this.shoppingList.filter(function(item) {
-          return item.zone.match(4)
-        })
+      zone4Filter() {
+        return this.$store.getters.zone4Getter
       }
   },
   methods: {

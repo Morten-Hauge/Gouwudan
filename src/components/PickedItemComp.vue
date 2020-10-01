@@ -2,7 +2,7 @@
     
     <div id="PickedItemComp">
         
-       <div class="picked-item" :class="{ pickedItemDone: pickedItem.done }" @click="toggleDone(pickedItem)"> {{pickedItem.name}} <br> {{pickedItem.zone}} </div> {{pickedItem.done}}
+       <div class="picked-item" :class="{ pickedItemDone: pickedItem.picked }" @click="toggleDone(pickedItem)"> {{pickedItem.name}} <br> {{pickedItem.zone}} </div> {{pickedItem.picked}}
         <br>
         <div class="delete-item" @click="deleteItem(pickedItem)"></div>
         <!-- <div class="delete-item" @click="$store.commit('removeItemFromList',pickedItem)"></div> -->
@@ -23,7 +23,7 @@ export default {
             this.$store.commit('addedToBasket',pickedItem)
         },
         deleteItem: function (pickedItem) {
-            this.$store.commit('removeItemFromList',pickedItem)
+            this.$store.commit('removeItemFromList',pickedItem);
         }
     }
 }

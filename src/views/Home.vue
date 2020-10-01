@@ -37,11 +37,12 @@ export default {
   methods: {
         addItem(){
 
-            var name = event.target.getAttribute('data-name');
-            var zone = event.target.getAttribute('data-zone');
-            var index = event.target.getAttribute('data-index');
+            //var name = event.target.getAttribute('data-name');
+            //var zone = event.target.getAttribute('data-zone');
+            //var index = event.target.getAttribute('data-index');
             
-            this.$store.commit('addItemToList', {name: name, zone: zone, index: index, done: false})
+            // this.$store.commit('addItemToList', {name: name, zone: zone, index: index, done: false})
+            this.$store.commit('addItemToList', {item})
 
         }
    },
