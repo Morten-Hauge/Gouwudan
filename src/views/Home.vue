@@ -2,22 +2,23 @@
   <div class="home">
     
     <h1>Home</h1>
-
-    <addItem v-for="item in sortedArray" :item="item" :key="item.name" @click.native="addItem($event)" />
+    
+    <!-- <addItem v-for="item in sortedArray" :item="item" :key="item.name" @click.native="addItem($event)" /> -->
     <!-- <div v-for="item in sortedArray" :key="item.name">{{item.name}}</div> -->
-    <!-- <addItem v-for="item in sortedArray" :item="item" :key="item.name" /> -->
+    <addItem v-for="item in sortedArray" :item="item" :key="item.name" />
 
     <br><br>
 
     <!-- <List /> -->
     <!-- {{this.$store.state.dataItems}} -->
+    {{this.$store.state.shoppingList}}
   </div>
 
 </template>
 
 <script>
 
-import items from '../items.json'
+//import items from '../items.json'
 import addItem from '../components/addItem.vue'
 import list from '../components/list'
 
@@ -29,7 +30,7 @@ export default {
   },
   data() {
     return{
-      items   
+      //items   
       // shoppingList: []
     }
   },
@@ -53,8 +54,8 @@ export default {
           return 1;
           return 0;
       }
-      return this.items.sort(compare);
-      //return this.$store.state.dataItems.sort(compare);
+      //return this.items.sort(compare);
+      return this.$store.state.dataItems.sort(compare);
     }
         
   }

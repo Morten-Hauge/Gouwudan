@@ -16,6 +16,24 @@ export default new Vuex.Store({
     shoppingList: [],
     dataItems
   },
+  getters: {
+    zone1Getter: state => {
+      return state.shoppingList.filter(item => item.zone.match(1))
+      //return state.shoppingList
+      //return state.shoppingList.filter(item => item.zone == 1)
+      
+      // if(state.shoppingList[1].zone == 1){
+      //     return this
+      // }
+      
+      // let test = state.shoppingList;
+      // let i = 0;
+      // for(i = 0, test.length(); i++;){
+      //   return state.shoppingList[i].zone == 1
+      // }
+
+    }
+  },
   mutations: {
     addItemToList(state, item){
       state.shoppingList.push(item)

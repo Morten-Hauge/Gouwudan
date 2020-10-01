@@ -2,7 +2,7 @@
     
     <div id="PickedItemComp">
         
-       <div class="picked-item" :class="{ pickedItemDone: pickedItem.done }" @click="toggleDone(pickedItem)"> {{pickedItem.name}} </div> {{pickedItem.done}}
+       <div class="picked-item" :class="{ pickedItemDone: pickedItem.done }" @click="toggleDone(pickedItem)"> {{pickedItem.name}} <br> {{pickedItem.zone}} </div> {{pickedItem.done}}
         <br>
         <div class="delete-item" @click="deleteItem(pickedItem)"></div>
         <!-- <div class="delete-item" @click="$store.commit('removeItemFromList',pickedItem)"></div> -->

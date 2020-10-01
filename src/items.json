@@ -2,31 +2,37 @@
     {
         "name": "Tomater",
         "zone": 1,
-        "added": false
+        "added": false,
+        "picked": false
     },
     {
         "name": "Tacolefser",
         "zone": 2,
-        "added": false
+        "added": false,
+        "picked": false
     },
     {
         "name": "Biff",
         "zone": 3,
-        "added": false
+        "added": false,
+        "picked": false
     },
     {
         "name": "Øl",
         "zone": 4,
-        "added": false
+        "added": false,
+        "picked": false
     },
     {
         "name": "Pops",
         "zone": 4,
-        "added": false
+        "added": false,
+        "picked": false
     },
     {
         "name": "Bananer",
         "zone": 1,
-        "added": false
+        "added": false,
+        "picked": false
     }
 ]
