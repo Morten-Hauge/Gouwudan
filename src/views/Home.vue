@@ -3,14 +3,8 @@
     
     <h1>Home</h1>
     
-    <!-- <addItem v-for="item in sortedArray" :item="item" :key="item.name" @click.native="addItem($event)" /> -->
-    <!-- <div v-for="item in sortedArray" :key="item.name">{{item.name}}</div> -->
     <addItem v-for="item in sortedArray" :item="item" :key="item.name" />
 
-    <br><br>
-
-    <!-- <List /> -->
-    <!-- {{this.$store.state.dataItems}} -->
     {{this.$store.state.shoppingList}}
   </div>
 
@@ -18,7 +12,7 @@
 
 <script>
 
-//import items from '../items.json'
+
 import addItem from '../components/addItem.vue'
 import list from '../components/list'
 
@@ -37,12 +31,7 @@ export default {
   methods: {
         addItem(){
 
-            //var name = event.target.getAttribute('data-name');
-            //var zone = event.target.getAttribute('data-zone');
-            //var index = event.target.getAttribute('data-index');
-            
-            // this.$store.commit('addItemToList', {name: name, zone: zone, index: index, done: false})
-            this.$store.commit('addItemToList', {item})
+          this.$store.commit('addItemToList', {item})
 
         }
    },
@@ -55,7 +44,6 @@ export default {
           return 1;
           return 0;
       }
-      //return this.items.sort(compare);
       return this.$store.state.dataItems.sort(compare);
     }
         

@@ -2,33 +2,27 @@
   <div class="list">
     
     <h1>Liste til butikken</h1>
-    
-    <!-- <div v-for="pickedItem in shoppingList" :key="pickedItem.name">{{pickedItem.name}} <br> {{pickedItem.zone}}</div> -->
 
     <h1>Zone 1</h1>
-    <!-- <div v-for="pickedItem in zone1" :key="pickedItem.name">{{pickedItem.name}} <br> {{pickedItem.zone}}</div> -->
-    <!-- <PickedItemComp v-for="pickedItem in zone1" :key="pickedItem.name" :pickedItem="pickedItem" /> -->
-    <!-- <PickedItemComp v-for="pickedItem in test(pickedItem)" :key="pickedItem.name" :pickedItem="pickedItem" /> -->
+
     <PickedItemComp v-for="pickedItem in zone1Filter" :key="pickedItem.name" :pickedItem="pickedItem" />
-    
-    <!-- {{shoppingList[0].zone}} -->
     
     <br><br>
 
     <h1>Zone 2</h1>
-    <!-- <div v-for="pickedItem in zone2" :key="pickedItem.name">{{pickedItem.name}} <br> {{pickedItem.zone}}</div> -->
+
     <PickedItemComp v-for="pickedItem in zone2Filter" :key="pickedItem.name" :pickedItem="pickedItem" />
 
     <br><br>
 
     <h1>Zone 3</h1>
-    <!-- <div v-for="pickedItem in zone3" :key="pickedItem.name">{{pickedItem.name}} <br> {{pickedItem.zone}}</div> -->
+
     <PickedItemComp v-for="pickedItem in zone3Filter" :key="pickedItem.name" :pickedItem="pickedItem" />
 
     <br><br>
 
     <h1>Zone 4</h1>
-    <!-- <div v-for="pickedItem in zone4" :key="pickedItem.name">{{pickedItem.name}} <br> {{pickedItem.zone}}</div> -->
+
     <PickedItemComp v-for="pickedItem in zone4Filter" :key="pickedItem.name" :pickedItem="pickedItem" />
 
     <br><br>

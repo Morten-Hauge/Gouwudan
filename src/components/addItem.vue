@@ -14,8 +14,8 @@
 export default {
     name: 'addItem',
     props: {
-	     item:{
-		     type: Object
+        item:{
+            type: Object
          }
     },
     methods: {

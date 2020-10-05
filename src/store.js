@@ -4,6 +4,7 @@ import VuexPersist from 'vuex-persist'
 
 import dataItems from './items.json'
 import { indexOf } from 'core-js/fn/array'
+// import { indexOf } from 'core-js/fn/array'
 
 Vue.use(Vuex)
 
@@ -70,7 +71,10 @@ export default new Vuex.Store({
     },
     emptyList(state) {
       state.shoppingList = [];
-      //state.shoppingList.map(e => ({...e, added: false}));
+
+      for(let i=0; i < state.dataItems.length; i++){
+        state.dataItems[i].added = false;
+      }
     }
   },
   actions: {
