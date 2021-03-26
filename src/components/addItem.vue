@@ -20,7 +20,16 @@ export default {
     },
     methods: {
         added: function (item) {
+            // let itemClone = {...item};
+            // this.$store.commit('addItemToList', {item, itemClone})
+            // this.$store.commit('addItemToList', item)
+            
+            // let obj1 = {…item};
+
+            // * On item click addItemToList is run from store.js
+
             this.$store.commit('addItemToList', item)
+            // this.$store.commit('test')
         }
     }
 }

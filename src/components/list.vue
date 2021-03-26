@@ -47,12 +47,16 @@ export default {
       shoppingList() {
         return this.$store.state.shoppingList
       },
-      zone1(item) {
-        return this.$store.state.shoppingList.filter(
-          item => item.zone == 1
-        );
-      },
-      zone1Filter(zone1) {
+      // zone1(item) {
+      //   return this.$store.state.shoppingList.filter(
+      //     item => item.zone == 1
+      //   );
+      // },
+      // zone1Filter(zone1) {
+
+      // * Filter by zone getters ran in store.js
+      
+      zone1Filter() {
         return this.$store.getters.zone1Getter
       },
       zone2Filter() {
@@ -66,6 +70,9 @@ export default {
       }
   },
   methods: {
+
+    // * At "Empty list" button click emptyList is run from store.js
+
     emptyList(){
       this.$store.commit('emptyList');
     }

@@ -14,14 +14,20 @@
 export default {
     name: 'PickedItemComp',
     props: {
-	    pickedItem:{
-		    type: Object
+        pickedItem:{
+            type: Object
         }
     },
     methods: {
+
+        // * On item click addedToBasket is run from store.js
+
         toggleDone: function (pickedItem) {
             this.$store.commit('addedToBasket',pickedItem)
         },
+
+        // * On delete item click removeItemFromList is run from store.js
+
         deleteItem: function (pickedItem) {
             this.$store.commit('removeItemFromList',pickedItem);
         }

@@ -1,35 +1,41 @@
 [
     {
+        "id": "Tomater",
         "name": "Tomater",
         "zone": 1,
         "added": false,
         "picked": false
     },
     {
+        "id": "Tacolefser",
         "name": "Tacolefser",
         "zone": 2,
         "added": false,
         "picked": false
     },
     {
+        "id": "Biff",
         "name": "Biff",
         "zone": 3,
         "added": false,
         "picked": false
     },
     {
+        "id": "Øl",
         "name": "Øl",
         "zone": 4,
         "added": false,
         "picked": false
     },
     {
+        "id": "Pops",
         "name": "Pops",
         "zone": 4,
         "added": false,
         "picked": false
     },
     {
+        "id": "Bananer",
         "name": "Bananer",
         "zone": 1,
         "added": false,

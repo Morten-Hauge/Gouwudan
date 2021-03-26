@@ -5,7 +5,12 @@
     
     <addItem v-for="item in sortedArray" :item="item" :key="item.name" />
 
+    {{this.$store.state.dataItems}}
+
+    <hr>
+
     {{this.$store.state.shoppingList}}
+    
   </div>
 
 </template>
@@ -14,13 +19,13 @@
 
 
 import addItem from '../components/addItem.vue'
-import list from '../components/list'
+// import list from '../components/list'
 
 export default {
   name: 'home',
   components: {
     addItem,
-    list
+    // list
   },
   data() {
     return{
@@ -28,14 +33,17 @@ export default {
       // shoppingList: []
     }
   },
-  methods: {
-        addItem(){
+  // methods: {
+  //       addItem(){
 
-          this.$store.commit('addItemToList', {item})
+  //         this.$store.commit('addItemToList', {item})
 
-        }
-   },
+  //       }
+  //  },
   computed: {
+
+    // * Sort items in dataItems (items.json) alphabetically – imported in store.js
+    
     sortedArray: function() {
       function compare(a, b) {
         if (a.name < b.name)
@@ -44,9 +52,13 @@ export default {
           return 1;
           return 0;
       }
-      return this.$store.state.dataItems.sort(compare);
-    }
-        
+      // return this.$store.state.dataItems.sort(compare);
+      return this.$store.state.dataItems.slice().sort(compare);
+    }//,
+    // pushToStorageOnLoad: function() {
+    //   return this.$store.commit('test', dataItems) 
+    // }
+      
   }
   
 }
