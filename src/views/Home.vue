@@ -1,16 +1,18 @@
 <template>
-  <div class="home">
-    
-    <h1>Home</h1>
-    
-    <addItem v-for="item in sortedArray" :item="item" :key="item.name" />
+  <div class="home" v-touch:swipe.left="swipeToList">
+    <!-- <section class="hero hero-hjemme">
 
-    {{this.$store.state.dataItems}}
+      <h1>Hjemme</h1>
 
-    <hr>
+    </section> -->
 
-    {{this.$store.state.shoppingList}}
+    <section class="home-content">
+      
+      <h1>Hjemme</h1>
+
+      <addItem v-for="item in sortedArray" :item="item" :key="item.name" />
     
+    </section>
   </div>
 
 </template>
@@ -19,7 +21,6 @@
 
 
 import addItem from '../components/addItem.vue'
-// import list from '../components/list'
 
 export default {
   name: 'home',
@@ -27,19 +28,7 @@ export default {
     addItem,
     // list
   },
-  data() {
-    return{
-      //items   
-      // shoppingList: []
-    }
-  },
-  // methods: {
-  //       addItem(){
 
-  //         this.$store.commit('addItemToList', {item})
-
-  //       }
-  //  },
   computed: {
 
     // * Sort items in dataItems (items.json) alphabetically – imported in store.js
@@ -52,15 +41,44 @@ export default {
           return 1;
           return 0;
       }
-      // return this.$store.state.dataItems.sort(compare);
+
       return this.$store.state.dataItems.slice().sort(compare);
-    }//,
-    // pushToStorageOnLoad: function() {
-    //   return this.$store.commit('test', dataItems) 
-    // }
+    }
       
+  },
+  methods: {
+    swipeToList(){
+      this.$router.push('list')
+    }
   }
   
 }
 
 </script>
+
+<style>
+
+.home{
+  /* display: flex;
+  flex-direction: column; */
+  /* max-width: 800px; */
+  /* align-self: center; */
+  /* margin: 0 auto; */
+}
+
+.home-content{
+  /* margin-top: -1.5rem; */
+  z-index: 999 !important;
+  padding: 1rem 1rem 8rem 1rem;
+  /* border-radius: 20px 20px 0 0 ; */
+  background: var(--bg-color);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-hjemme{
+  background-image: url('../assets/hero-hjemme.jpg');
+  background-position: center top;
+}
+
+</style>

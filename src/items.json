@@ -1,43 +1,578 @@
 [
     {
-        "id": "Tomater",
+        "name": "Cola",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Urge",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
         "name": "Tomater",
         "zone": 1,
         "added": false,
         "picked": false
     },
     {
-        "id": "Tacolefser",
+        "name": "Bananer",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Agurk",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    }
+    ,
+    {
+        "name": "Sopp",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Poteter",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Hvitløk",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Vårløk",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Koriander",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Løk",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Purré",
+        "zone": 1,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Pulled pork",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Tacosaus",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Jalapenos",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Tacokrydder",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Kjøttdeig",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Krydderskinke",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Pizzadeig",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Pizzakjøtt",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Coleslaw",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Pølser – wiener",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Pølser – tjukke",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Bacon",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Salami",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Leverpostei",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
         "name": "Tacolefser",
         "zone": 2,
         "added": false,
         "picked": false
     },
     {
-        "id": "Biff",
         "name": "Biff",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Saus til biff",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Saus til fisk",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Saus til kylling",
+        "zone": 2,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Brød",
         "zone": 3,
         "added": false,
         "picked": false
     },
     {
-        "id": "Øl",
-        "name": "Øl",
+        "name": "Hamburgerbrød",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Baguetter",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Ost – strimlet",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Ost – skivet",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Brie",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Ketchup",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Sennep",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "BBQ-saus",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Mais",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Tomater – hakka",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Kidneybønner",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Tomatbønner",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Energy bars",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Kjeks",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Stekeolje",
+        "zone": 3,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Melk",
         "zone": 4,
         "added": false,
         "picked": false
     },
     {
-        "id": "Pops",
+        "name": "Iskaffe",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Egg",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Rømme",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Creme fraiche",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Appelsinjuice",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Eplejuice",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Gjær",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Smør",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Stekesmør",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Yoghurt",
+        "zone": 4,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Iste – pulver",
+        "zone": 5,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Toalettpapir",
+        "zone": 5,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Kjøkkenpapir",
+        "zone": 5,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Bakesjokolade",
+        "zone": 5,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Servietter",
+        "zone": 5,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Brødposer",
+        "zone": 5,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Pytt-i-panne",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Røsti",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Pommes frites",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Pizza – frossen",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Rotgrønnsaker",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Grønnsaksmiks",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Fiskepinner",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Rødspette",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Løvbiff",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Pitabrød",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Scampi",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Potetgull",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Øl – Morten",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Øl – Ye",
+        "zone": 6,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Vaskemiddel – farget",
+        "zone": 7,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Vaskemiddel – hvitt",
+        "zone": 7,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Oppvaskstabletter",
+        "zone": 7,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Oppvasksmiddel",
+        "zone": 7,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "WC Power Gel",
+        "zone": 7,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Universalspray",
+        "zone": 7,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "WC Duck",
+        "zone": 7,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Ovnspray",
+        "zone": 7,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Tannkrem",
+        "zone": 8,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Tannbørste",
+        "zone": 8,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Tanntråd",
+        "zone": 8,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Håndsåpe",
+        "zone": 8,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Is",
+        "zone": 8,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Sjokoladeplate",
+        "zone": 8,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Deodorant",
+        "zone": 8,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Hårvoks",
+        "zone": 8,
+        "added": false,
+        "picked": false
+    },
+    {
+        "name": "Bomullspads",
+        "zone": 8,
+        "added": false,
+        "picked": false
+    },
+    {
         "name": "Pops",
-        "zone": 4,
-        "added": false,
-        "picked": false
-    },
-    {
-        "id": "Bananer",
-        "name": "Bananer",
-        "zone": 1,
+        "zone": 8,
         "added": false,
         "picked": false
     }

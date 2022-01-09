@@ -3,8 +3,6 @@ import Vuex from 'vuex'
 import VuexPersist from 'vuex-persist'
 
 import dataItems from './items.json'
-//import { indexOf } from 'core-js/fn/array'
-// import { indexOf } from 'core-js/fn/array'
 
 Vue.use(Vuex)
 
@@ -43,20 +41,47 @@ export default new Vuex.Store({
       return state.shoppingList.filter(
         item => item.zone == 4
       );
+    },
+    zone5Getter: state => {
+      return state.shoppingList.filter(
+        item => item.zone == 5
+      );
+    },
+    zone6Getter: state => {
+      return state.shoppingList.filter(
+        item => item.zone == 6
+      );
+    },
+    zone7Getter: state => {
+      return state.shoppingList.filter(
+        item => item.zone == 7
+      );
+    },
+    zone8Getter: state => {
+      return state.shoppingList.filter(
+        item => item.zone == 8
+      );
     }
   },
   mutations: {
     
     // * Function for adding items from dataItems to shoppingList
 
-    // addItemToList(state, {item, itemClone}){
     addItemToList(state, item){
       if(state.shoppingList.some(data => data.name === item.name)){
-        //console.log("Finnes allerede")
-        // return false;
-      }else{
-        //let itemClone = {...item};
-        // state.shoppingList.push(itemClone);
+
+        // * Find position of matching element in shoppingList – set picked to false and remove it from shoppingList
+
+        let pos = state.shoppingList.indexOf(item);
+        state.shoppingList[pos].picked = false;
+        state.shoppingList.splice(pos, 1);
+        
+        // * Set item added to false in dataItems
+
+        let index = state.dataItems.indexOf(item);
+        state.dataItems[index].added = false;
+        
+      }else{        
         
         state.shoppingList.push(item);
         
@@ -64,10 +89,6 @@ export default new Vuex.Store({
         state.dataItems[index].added = true;
       }
     },
-    // test(state, item){
-    //   // state.dataItems = item;
-    //   console.log(state.item)
-    // },
 
     // * Remove item from shoppingList
 
@@ -90,23 +111,36 @@ export default new Vuex.Store({
 
     addedToBasket(state, item){
       let index = state.shoppingList.indexOf(item);
-      state.shoppingList[index].picked = true;
+
+      if(state.shoppingList[index].picked === false)
+      {
+        state.shoppingList[index].picked = true;
+      }
+      else{
+        state.shoppingList[index].picked = false;
+      }
     },
 
     // * Purge shoppingList
 
     emptyList(state) {
+      
+      // * Set picked to false for all items in shoppingList
+
+      for(var i = 0; i < state.shoppingList.length; i++){
+        state.shoppingList[i].picked = false;
+      }
+
+      // * Clear shoppingList array
+
       state.shoppingList = [];
 
-      // * Set picked to false for all items in dataItems
-
+      // * Set added to false for all items in dataItems
+      
       for(let i=0; i < state.dataItems.length; i++){
         state.dataItems[i].added = false;
       }
     }
-  },
-  actions: {
-
   },
   plugins: [vuexPersist.plugin]
 })
